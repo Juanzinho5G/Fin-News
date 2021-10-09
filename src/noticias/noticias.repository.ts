@@ -14,7 +14,6 @@ export class noticiasRepository extends Repository<Noticia> {
             titulo,
             descricao,
             texto_completo,
-            versao:1
         })
 
         return await this.save(noticia)
