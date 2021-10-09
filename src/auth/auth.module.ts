@@ -11,8 +11,7 @@ import { LocalStrategy } from './local.strategy';
   imports: [RedatorModule,PassportModule,
     JwtModule.register({
       secret: jwtConstants.secret,
-      //Expiraçao do token 120 segundos
-      signOptions: { expiresIn: '120s' },
+      signOptions: { expiresIn: '30min' },
     })
   ],
   providers: [AuthService,LocalStrategy,JwtStrategy],

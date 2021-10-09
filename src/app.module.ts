@@ -5,6 +5,7 @@ import { AppService } from './app.service';
 import { RedatorModule } from './redator/redator.module';
 import { NoticiasModule } from './noticias/noticias.module';
 import { AuthModule } from './auth/auth.module';
+import { EditarNoticiaModule } from './editar-noticia/editar-noticia.module';
 
 @Module({
   imports: [
@@ -20,7 +21,8 @@ import { AuthModule } from './auth/auth.module';
     }),
     RedatorModule,
     NoticiasModule,
-    AuthModule
+    AuthModule,
+    EditarNoticiaModule
   ],
   controllers: [AppController],
   providers: [AppService],

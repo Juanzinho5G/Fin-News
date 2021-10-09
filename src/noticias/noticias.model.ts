@@ -1,4 +1,5 @@
-import {Column,Entity, PrimaryGeneratedColumn} from 'typeorm';
+import { Redator } from 'src/redator/redator.model';
+import {Column,Entity, ManyToOne, PrimaryGeneratedColumn} from 'typeorm';
 
 @Entity({name:'noticia'})
 export class Noticia{
@@ -10,6 +11,10 @@ export class Noticia{
     descricao:string
     @Column()
     texto_completo:string
-    @Column()
-    versao:number
+
+    @ManyToOne(type => Redator, user => user.noticia)
+    user:Redator
+
+    @Column({nullable: true})
+    UpdateAt:Date
 }

@@ -1,4 +1,5 @@
-import {Column,Entity, PrimaryGeneratedColumn} from 'typeorm';
+import { Noticia } from 'src/noticias/noticias.model';
+import {Column,Entity, OneToMany, PrimaryGeneratedColumn} from 'typeorm';
 
 @Entity()
 export class Redator{
@@ -11,4 +12,7 @@ export class Redator{
     email:string
     @Column()
     senha:string
+
+    @OneToMany(type => Noticia, noticia =>noticia.user,{eager:true})
+    noticia:Noticia[]
 }

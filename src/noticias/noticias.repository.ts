@@ -13,8 +13,7 @@ export class noticiasRepository extends Repository<Noticia> {
         let noticia = this.create({
             titulo,
             descricao,
-            texto_completo,
-            versao:1
+            texto_completo
         })
 
         return await this.save(noticia)

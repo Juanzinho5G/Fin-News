@@ -17,4 +17,7 @@ export class RedatorService {
     async buscarPorEmail(email:string){
         return this.redator.buscar(email);
     }
+    async findOne(id){
+        return this.redator.findOne(id)
+    }
 }
