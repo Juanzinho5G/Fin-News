@@ -14,7 +14,7 @@ import { EditarNoticiaModule } from './editar-noticia/editar-noticia.module';
       host: 'localhost',
       port: 5432,
       username:'postgres',
-      password:'205090',
+      password:'root',
       database: 'finNews',
       autoLoadEntities:true,
       synchronize:true

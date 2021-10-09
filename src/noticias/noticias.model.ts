@@ -11,6 +11,8 @@ export class Noticia{
     descricao:string
     @Column()
     texto_completo:string
+    @Column()
+    versao:number
 
     @ManyToOne(type => Redator, user => user.noticia)
     user:Redator
